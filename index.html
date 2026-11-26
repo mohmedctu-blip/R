@@ -1,56 +1,208 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <title>المدهش ابو اسلام </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الصفحة الرئيسية - جامعة برج العرب التكنولوجية</title>
+    <link rel="stylesheet" href="home.css">
+    
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background-color: #f0f4f8;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: #333;
+        }
+        .container {
+            background: #ffffff;
+            width: 100%;
+            max-width: 480px;
+            padding: 25px 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        .header-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #e2e8f0;
+            padding-bottom: 12px;
+            margin-bottom: 20px;
+            font-size: 0.9rem;
+            color: #4a5568;
+        }
+        .header-bar a {
+            text-decoration: none;
+            color: #2b6cb0;
+            font-weight: bold;
+        }
+        fieldset {
+            border: 1px solid #cbd5e0;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 0;
+        }
+        legend {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #1a365d;
+            padding: 0 10px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: 600;
+            color: #2d3748;
+        }
+        input[type="text"],
+        input[type="number"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px 12px;
+            border: 1px solid #cbd5e0;
+            border-radius: 6px;
+            font-size: 1rem;
+            transition: border-color 0.2s;
+        }
+        input:focus {
+            outline: none;
+            border-color: #3182ce;
+            box-shadow: 0 0 0 3px rgba(49, 130, 206, 0.15);
+        }
+        .actions {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .btn-submit {
+            flex: 2;
+            background-color: #2b6cb0;
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .btn-submit:hover {
+            background-color: #2c5282;
+        }
+        .btn-back {
+            flex: 1;
+            text-align: center;
+            background-color: #edf2f7;
+            color: #4a5568;
+            text-decoration: none;
+            padding: 12px;
+            border-radius: 6px;
+            font-weight: bold;
+            transition: background 0.2s;
+        }
+        .btn-back:hover {
+            background-color: #e2e8f0;
+        }
+        /* تنسيق رسالة شكر التعاون */
+        .thanks-message {
+            display: none;
+            margin-top: 15px;
+            padding: 14px;
+            background-color: #e6fffa;
+            border: 1px solid #38b2ac;
+            color: #234e52;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 1.05rem;
+        }
+        .announcement {
+            margin-top: 25px;
+            background-color: #ebf8ff;
+            border-right: 4px solid #3182ce;
+            padding: 15px;
+            border-radius: 6px;
+        }
+        .announcement h3 {
+            margin: 0 0 8px 0;
+            font-size: 1rem;
+            color: #2b6cb0;
+        }
+        .announcement p {
+            margin: 0;
+            font-size: 0.92rem;
+            line-height: 1.6;
+            color: #2d3748;
+        }
+    </style>
 </head>
-<link rel="stylesheet" href="web/css/fast.css">
 <body>
 
-      <!-- اضافه الصوره -->
-        <h1>المدهش ابو اسلام </h1>
-    <h2>manyo</h2>
-   
-  <table border="2">
-      <tr>
-         <td>المدهش </td>
-         <td>واحد </td>
-         <td>بس</td>
-      </tr>
-  </table>
-  <img width="350" src="المدهش.jpeg">
-<form action="second.html">
-    <label for="enter number"> رقم</label>
-    <input id="enter number"
-     type="number"  placeholder="اكتب رقم المويايل" required ="10">
-    <input type="submit" value="يلا بينا">
-</form>
- <audio controls ><!-- اضافه صوت  -->
-    <source src="Mol.mp3" typy="aduio/mpeg"></source >
-    </audio>
-    <h3> ماهو طعامك المفضل</h3>
-    <input id="c"value="html"type="radio" >
-    <label for="c" >html</label>
-    <h2> ماهو قسمك</h2>
-    <div>
-        <!-- name="langاختيار واحد -->
-        <input id="1" type="radio" name="lang">
-        <label for="1"> سكه</label>
-   </div>
-   <div>
-       <!-- بتخلى اit متعلم بس بيتغيرchecked -->
-        <input checked id="2" type="radio"name="lang">
-        <label for="2">IT </label>
-    </div>
-    <div>
-        <select></select>
-    </div>    
-    
-         
-        
-    
-   
-    
-      
+    <main class="container">
+        <header class="header-bar">
+            <span>مرحباً، <strong>mohmedctu@gmail.com</strong></span>
+            <a href="tast.html" title="الانتقال للصفحة السابقة">الرئيسية ↩</a>
+        </header>
+
+        <form id="loginForm" action="login.php" method="post">
+            <fieldset>
+                <legend>أكمل البيانات</legend>
+
+                <div class="form-group">
+                    <label for="user">اسم المستخدم</label>
+                    <input id="user" name="username" type="text" placeholder="أدخل اسم المستخدم" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="ac">الرقم الأكاديمي</label>
+                    <input id="ac" name="academic_id" type="number" placeholder="أدخل الرقم الأكاديمي" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">كلمة المرور</label>
+                    <input id="password" name="password" type="password" placeholder="••••••••" required>
+                </div>
+
+                <div class="actions">
+                    <button type="submit" class="btn-submit">إرسال البيانات</button>
+                    <a href="tast.html" class="btn-back">رجوع</a>
+                </div>
+            </fieldset>
+        </form>
+
+        <!-- الرسالة التي تظهر بعد الانتهاء -->
+        <div id="thanksMsg" class="thanks-message">شكر لتعاون</div>
+
+        <section class="announcement">
+            <h3>📢 جداول امتحانات منتصف الفصل الدراسي الأول — العام الجامعي 2026 / 2027</h3>
+            <p>
+                يسرّ جامعة برج العرب التكنولوجية أن تعلن عن بدء نشر جداول امتحانات منتصف الفصل الدراسي الأول لجميع الأقسام. يرجى التأكد من البيانات أعلاه للاطلاع على الجدول الخاص بك.
+            </p>
+        </section>
+    </main>
+
+    <script>
+        const form = document.getElementById('loginForm');
+        const thanksMsg = document.getElementById('thanksMsg');
+
+        form.addEventListener('submit', function (event) {
+            // منع الانتقال الفوري لصفحة login.php إذا كنت تختبر الصفحة محلياً بدون سيرفر PHP
+            event.preventDefault();
+            thanksMsg.style.display = 'block';
+            form.reset();
+        });
+    </script>
+
 </body>
 </html>
